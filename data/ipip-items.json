@@ -1,0 +1,51 @@
+{
+  "instrument": "Mini-IPIP",
+  "itemCount": 20,
+  "language": "en",
+  "publicDomainItems": true,
+  "scoredByThisProgram": false,
+  "source": {
+    "itemWordingAndKey": "https://ipip.ori.org/MiniIPIPKey.htm",
+    "scalePaper": "Donnellan, M. B., Oswald, F. L., Baird, B. M., & Lucas, R. E. (2006). The Mini-IPIP scales: Tiny-yet-effective measures of the Big Five factors of personality. Psychological Assessment, 18, 192-203.",
+    "administrationOrderNote": "Items are stored in the commonly reprinted 1–20 order. Keys match the IPIP Mini-IPIP scoring key, not a local paraphrase.",
+    "directionsNote": "Project-original instructions; the English items and key are from IPIP."
+  },
+  "directions": {
+    "text": "Rate how well each statement describes your usual behavior today. Use the five options shown below.",
+    "responseAnchors": [
+      {"value": 1, "label": "Very inaccurate"},
+      {"value": 2, "label": "Moderately inaccurate"},
+      {"value": 3, "label": "Neither inaccurate nor accurate"},
+      {"value": 4, "label": "Moderately accurate"},
+      {"value": 5, "label": "Very accurate"}
+    ]
+  },
+  "signNotes": {
+    "neuroticism": "Mini-IPIP Factor IV is Neuroticism, not Emotional Stability. Positive-keyed items raise Neuroticism. Negative-keyed items (relaxed; seldom feel blue) lower Neuroticism and therefore point toward the emotional-stability end. Emotional stability is the opposite pole, not a second score. IPIP's key page states that the authors scored the lexical Emotional Stability scale in reverse and labeled it Neuroticism. This program does not convert either pole into a number.",
+    "intellect": "Mini-IPIP Factor V is Intellect or Imagination. It is not broad Openness to Experience. The IPIP key page notes that this short scale comes from the lexical Big Five markers, not the IPIP Five-Factor Model inventory. Only one item is positively keyed (vivid imagination); the other three are reverse-keyed. Novelty talk is not scored as this factor."
+  },
+  "ipipKeyFootnote": "The authors of the Mini-IPIP chose to score the Emotional Stability scale from the lexical Big Five in reverse and to use the label Neuroticism from the Five-Factor Model for this scale. The current consensus is that Emotional Stability and Neuroticism are opposite ends of the same dimension, or nearly so.",
+  "keyMeaning": "+ means agreement raises the named factor. - means agreement lowers it (reverse-keyed on the original 1–5 scale). This program does not score responses.",
+  "items": [
+    {"id": "mini-ipip-01", "administrationIndex": 1, "text": "Am the life of the party.", "dimension": "extraversion", "factorLabel": "Surgency or Extraversion", "key": "+", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-02", "administrationIndex": 2, "text": "Sympathize with others' feelings.", "dimension": "agreeableness", "factorLabel": "Agreeableness", "key": "+", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-03", "administrationIndex": 3, "text": "Get chores done right away.", "dimension": "conscientiousness", "factorLabel": "Conscientiousness", "key": "+", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-04", "administrationIndex": 4, "text": "Have frequent mood swings.", "dimension": "neuroticism", "factorLabel": "Neuroticism", "key": "+", "emotionalStabilitySign": "opposite", "notBroadOpenness": false},
+    {"id": "mini-ipip-05", "administrationIndex": 5, "text": "Have a vivid imagination.", "dimension": "intellect", "factorLabel": "Intellect or Imagination", "key": "+", "emotionalStabilitySign": null, "notBroadOpenness": true},
+    {"id": "mini-ipip-06", "administrationIndex": 6, "text": "Don't talk a lot.", "dimension": "extraversion", "factorLabel": "Surgency or Extraversion", "key": "-", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-07", "administrationIndex": 7, "text": "Am not interested in other people's problems.", "dimension": "agreeableness", "factorLabel": "Agreeableness", "key": "-", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-08", "administrationIndex": 8, "text": "Often forget to put things back in their proper place.", "dimension": "conscientiousness", "factorLabel": "Conscientiousness", "key": "-", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-09", "administrationIndex": 9, "text": "Am relaxed most of the time.", "dimension": "neuroticism", "factorLabel": "Neuroticism", "key": "-", "emotionalStabilitySign": "same-direction-as-stability", "notBroadOpenness": false},
+    {"id": "mini-ipip-10", "administrationIndex": 10, "text": "Am not interested in abstract ideas.", "dimension": "intellect", "factorLabel": "Intellect or Imagination", "key": "-", "emotionalStabilitySign": null, "notBroadOpenness": true},
+    {"id": "mini-ipip-11", "administrationIndex": 11, "text": "Talk to a lot of different people at parties.", "dimension": "extraversion", "factorLabel": "Surgency or Extraversion", "key": "+", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-12", "administrationIndex": 12, "text": "Feel others' emotions.", "dimension": "agreeableness", "factorLabel": "Agreeableness", "key": "+", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-13", "administrationIndex": 13, "text": "Like order.", "dimension": "conscientiousness", "factorLabel": "Conscientiousness", "key": "+", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-14", "administrationIndex": 14, "text": "Get upset easily.", "dimension": "neuroticism", "factorLabel": "Neuroticism", "key": "+", "emotionalStabilitySign": "opposite", "notBroadOpenness": false},
+    {"id": "mini-ipip-15", "administrationIndex": 15, "text": "Have difficulty understanding abstract ideas.", "dimension": "intellect", "factorLabel": "Intellect or Imagination", "key": "-", "emotionalStabilitySign": null, "notBroadOpenness": true},
+    {"id": "mini-ipip-16", "administrationIndex": 16, "text": "Keep in the background.", "dimension": "extraversion", "factorLabel": "Surgency or Extraversion", "key": "-", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-17", "administrationIndex": 17, "text": "Am not really interested in others.", "dimension": "agreeableness", "factorLabel": "Agreeableness", "key": "-", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-18", "administrationIndex": 18, "text": "Make a mess of things.", "dimension": "conscientiousness", "factorLabel": "Conscientiousness", "key": "-", "emotionalStabilitySign": null, "notBroadOpenness": false},
+    {"id": "mini-ipip-19", "administrationIndex": 19, "text": "Seldom feel blue.", "dimension": "neuroticism", "factorLabel": "Neuroticism", "key": "-", "emotionalStabilitySign": "same-direction-as-stability", "notBroadOpenness": false},
+    {"id": "mini-ipip-20", "administrationIndex": 20, "text": "Do not have a good imagination.", "dimension": "intellect", "factorLabel": "Intellect or Imagination", "key": "-", "emotionalStabilitySign": null, "notBroadOpenness": true}
+  ]
+}

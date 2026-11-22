@@ -1,0 +1,32 @@
+{
+  "name": "mingli-reflect",
+  "version": "0.2.1",
+  "description": "把心事摊开看：离线排盘、四支柱探索和可打开的竖版三句卡片。",
+  "type": "module",
+  "bin": {
+    "mingli": "./dist/src/cli.js"
+  },
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js assets/card/card.unit.test.mjs",
+    "mingli": "node dist/src/cli.js",
+    "build:preview": "node assets/card/build-preview.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@js-temporal/polyfill": "0.5.1",
+    "ajv": "8.20.0",
+    "astronomy-engine": "2.1.19",
+    "lunar-javascript": "1.7.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

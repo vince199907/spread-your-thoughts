@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "fictional": true,
+  "evidence": [
+    {
+      "quoteId": "s1",
+      "quote": "周末我通常一个人看书，不太出门。",
+      "dimension": "extraversion",
+      "pole": "low",
+      "timeScope": "long-term"
+    },
+    {
+      "quoteId": "s2",
+      "quote": "看到抽象的问题会想很久。",
+      "dimension": "intellect",
+      "pole": "high",
+      "timeScope": "long-term"
+    }
+  ]
+}

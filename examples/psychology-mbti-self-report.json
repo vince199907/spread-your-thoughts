@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "fictional": true,
+  "selfReportedMbti": "infp",
+  "evidence": [
+    {
+      "quoteId": "s1",
+      "quote": "这是用户自己写下的字母，不是测验结果。",
+      "dimension": "extraversion",
+      "pole": "low",
+      "timeScope": "unclear"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "reference-bank-plus-two-optional-prompts",
+  "compulsory": false,
+  "doNotAdministerAllReferenceItems": true,
+  "maxOptionalPrompts": 2,
+  "chapterNote": "这里只有 Mini-IPIP 20 条参考题，加上两句可选谈话起头。不是必答问卷，也不是聊天问题单的全部题目。",
+  "referenceInstrument": "data/ipip-items.json",
+  "optionalConversationStarters": [
+    {
+      "id": "prompt-weekend-recharge",
+      "text": "周末你通常怎么把精神缓过来？",
+      "purpose": "conversation-starter",
+      "notAnAssessment": true,
+      "mapsToScoredDimension": false
+    },
+    {
+      "id": "prompt-novelty",
+      "text": "遇到没见过的做法，你一般先试还是先看？",
+      "purpose": "conversation-starter",
+      "notAnAssessment": true,
+      "mapsToScoredDimension": false
+    }
+  ]
+}

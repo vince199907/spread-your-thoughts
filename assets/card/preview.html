@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>把心事摊开看 · 四卷示例</title>
+<link rel="stylesheet" href="./thoughts-card.css">
+<style>
+  html{color-scheme:dark}
+  body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 26%,#2b2527,#161617 65%);color:#e8e0d0;font:16px/1.6 "Noto Sans CJK SC",sans-serif}
+  main{padding:24px 12px 45px;max-width:490px;margin:auto;}
+  .cover{margin:0 0 16px;font-size:15px;color:#cfbfaa;text-align:center;}
+  .skins{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:0 0 15px;}
+  button{min-height:44px;background:#232122;color:#e5ddd0;border:1px solid #63584e;padding:0 13px;border-radius:3px;font-size:14px;cursor:pointer;}
+  button[aria-pressed="true"]{background:#d5c1a2;color:#221e1a;border-color:#d5c1a2;}
+  button:focus-visible{outline:2px solid #d0aa65;outline-offset:2px;}
+</style>
+</head>
+<body><main>
+<p class="cover">四卷札记 · 虚构示例</p>
+<div class="skins" role="group" aria-label="切换示例皮肤">
+ <button data-skin="tarot" aria-pressed="true">塔罗</button>
+ <button data-skin="iching" aria-pressed="false">易经</button>
+ <button data-skin="astrology" aria-pressed="false">星座</button>
+ <button data-skin="psychology" aria-pressed="false">心理</button>
+</div>
+<div id="card" aria-live="polite"></div>
+</main><script type="module" src="./preview.mjs"></script></body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "fictional": true,
+  "note": "虚构钟点，沿用 lunar-javascript 自己的测试向量，不是任何人的出生资料。",
+  "calendar": "solar",
+  "year": 2005,
+  "month": 12,
+  "day": 23,
+  "hour": 8,
+  "minute": 37,
+  "second": 0,
+  "sect": 2,
+  "gender": "unspecified"
+}

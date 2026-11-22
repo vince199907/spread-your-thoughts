@@ -1,0 +1,28 @@
+{
+  "numbering": "Rider-Waite-Smith major-arcana order: Strength is 8 and Justice is 11. Marseille swaps those two. Titles only.",
+  "note": "英文名是传统牌名。中文名是这些英文名的常用称呼，不是图解手册的句子。没有图片，没有韦特牌意正文。",
+  "cards": [
+    {"id": "tarot-00", "number": 0, "nameEn": "The Fool", "nameZh": "愚者"},
+    {"id": "tarot-01", "number": 1, "nameEn": "The Magician", "nameZh": "魔术师"},
+    {"id": "tarot-02", "number": 2, "nameEn": "The High Priestess", "nameZh": "女祭司"},
+    {"id": "tarot-03", "number": 3, "nameEn": "The Empress", "nameZh": "皇后"},
+    {"id": "tarot-04", "number": 4, "nameEn": "The Emperor", "nameZh": "皇帝"},
+    {"id": "tarot-05", "number": 5, "nameEn": "The Hierophant", "nameZh": "教皇"},
+    {"id": "tarot-06", "number": 6, "nameEn": "The Lovers", "nameZh": "恋人"},
+    {"id": "tarot-07", "number": 7, "nameEn": "The Chariot", "nameZh": "战车"},
+    {"id": "tarot-08", "number": 8, "nameEn": "Strength", "nameZh": "力量"},
+    {"id": "tarot-09", "number": 9, "nameEn": "The Hermit", "nameZh": "隐者"},
+    {"id": "tarot-10", "number": 10, "nameEn": "Wheel of Fortune", "nameZh": "命运之轮"},
+    {"id": "tarot-11", "number": 11, "nameEn": "Justice", "nameZh": "正义"},
+    {"id": "tarot-12", "number": 12, "nameEn": "The Hanged Man", "nameZh": "倒吊人"},
+    {"id": "tarot-13", "number": 13, "nameEn": "Death", "nameZh": "死神"},
+    {"id": "tarot-14", "number": 14, "nameEn": "Temperance", "nameZh": "节制"},
+    {"id": "tarot-15", "number": 15, "nameEn": "The Devil", "nameZh": "恶魔"},
+    {"id": "tarot-16", "number": 16, "nameEn": "The Tower", "nameZh": "高塔"},
+    {"id": "tarot-17", "number": 17, "nameEn": "The Star", "nameZh": "星星"},
+    {"id": "tarot-18", "number": 18, "nameEn": "The Moon", "nameZh": "月亮"},
+    {"id": "tarot-19", "number": 19, "nameEn": "The Sun", "nameZh": "太阳"},
+    {"id": "tarot-20", "number": 20, "nameEn": "Judgement", "nameZh": "审判"},
+    {"id": "tarot-21", "number": 21, "nameEn": "The World", "nameZh": "世界"}
+  ]
+}

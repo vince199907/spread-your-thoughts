@@ -1,0 +1,18 @@
+{
+  "synthetic": true,
+  "fictional": true,
+  "note": "出生字段必须被丢弃。与 psychology-birth-b.json 的证据相同。",
+  "evidence": [
+    {
+      "quoteId": "s1",
+      "quote": "平时想一个人待着。",
+      "dimension": "extraversion",
+      "pole": "low",
+      "timeScope": "long-term"
+    }
+  ],
+  "birth": {"year": 1990, "month": 5, "day": 15, "hour": 14, "gender": "female", "dayMaster": "壬"},
+  "gender": "female",
+  "dayMaster": "壬",
+  "elements": {"木": 4}
+}

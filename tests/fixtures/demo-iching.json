@@ -1,0 +1,26 @@
+{
+  "synthetic": true,
+  "pillar": "iching",
+  "topic": "给眼前的事留一点空白",
+  "symbol": {
+    "method": "coin",
+    "lines": [
+      7,
+      8,
+      9,
+      7,
+      8,
+      9
+    ]
+  },
+  "conversation": {
+    "observations": [
+      {
+        "id": "demo-01",
+        "period": "recent",
+        "quote": "这两天临近交付，昨晚在准备睡觉时反复查看了三次进度，挤占了休息；平时不太这样。",
+        "behaviorExample": "昨晚在准备睡觉时反复查看了三次进度，挤占了休息"
+      }
+    ]
+  }
+}

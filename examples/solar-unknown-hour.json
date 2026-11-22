@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "fictional": true,
+  "note": "虚构日期。时辰未知，不得填成午时。",
+  "calendar": "solar",
+  "year": 2005,
+  "month": 12,
+  "day": 23,
+  "hour": "unknown",
+  "sect": 2
+}

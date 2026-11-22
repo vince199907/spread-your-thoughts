@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>把心事摊开看 · 四卷示例</title>
+<style>
+.st-result {
+  --st-sans:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --st-serif:"Noto Serif CJK SC","Songti SC",SimSun,serif;
+  width:min(100%,430px);margin-inline:auto;color:#edebe5;
+  container-type:inline-size;
+  font:16px/1.65 var(--st-sans);text-align:left;
+}
+.st-result *, .st-result *::before,.st-result *::after {box-sizing:border-box}
+.st-card {--st-base:#17191f;--st-text:#eee8dc;--st-ink:#b59a62;--st-muted:#d5c9b2;--st-level:#212128;--st-mist:#51433d;--st-wash:#443945;--st-accent:#9c7946;--st-stroke:#665639;--st-art-bg:radial-gradient(ellipse at 51% 35%,#393037,#1c1a21 78%);padding:26px 28px 22px;color:var(--st-text);background:var(--st-base);border:1px solid var(--st-stroke);border-radius:7px;box-shadow:0 20px 55px #0007;isolation:isolate;}
+.st-card[data-skin="iching"] {--st-base:#f3ede0;--st-text:#302d28;--st-ink:#514136;--st-muted:#645344;--st-level:#f8f3e9;--st-mist:#d3c3aa;--st-wash:#b9aa92;--st-accent:#8e5648;--st-stroke:#ad9d86;--st-art-bg:radial-gradient(ellipse at 61% 33%,#f6eddb,#e6d9c2);}
+.st-card[data-skin="astrology"] {--st-base:#202339;--st-text:#f0edf4;--st-ink:#cdc0d8;--st-muted:#d7cbdf;--st-level:#25293e;--st-mist:#6f6589;--st-wash:#5b5878;--st-accent:#e3c6a7;--st-stroke:#69637f;--st-art-bg:linear-gradient(143deg,#171e35,#39334a);}
+.st-card[data-skin="psychology"] {--st-base:#e7e8e1;--st-text:#303a37;--st-ink:#435149;--st-muted:#4f5e57;--st-level:#eff0ea;--st-mist:#b9c4b5;--st-wash:#cdbdc6;--st-accent:#87998b;--st-stroke:#9da89f;--st-art-bg:radial-gradient(ellipse at 60% 33%,#eef0e7,#d7ddd2);}
+.st-kicker {display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 10px;margin:0 0 7px;color:var(--st-muted);font-size:14px;letter-spacing:.055em;}
+.st-title {font:600 25px/1.45 var(--st-serif);letter-spacing:.04em;margin:0;overflow-wrap:anywhere;}
+.st-figure {margin:16px 0 18px;}
+.st-art {position:relative;overflow:hidden;isolation:isolate;aspect-ratio:5/3;border:1px solid var(--st-stroke);border-radius:2px;background:var(--st-art-bg);--st-x:0;--st-y:0;}
+.st-plane {position:absolute;display:block;inset:0;height:100%;width:100%;transform:translate3d(calc(var(--st-x) * var(--st-depth)),calc(var(--st-y) * var(--st-depth)),0);transition:transform 210ms ease-out;pointer-events:none;}
+.st-plane-0 {--st-depth:2px;}
+.st-plane-1 {--st-depth:5px;}
+.st-plane-2 {--st-depth:1px;}
+.st-foil {position:absolute;inset:4.8%;opacity:0;border:1px solid transparent;border-radius:1px;pointer-events:none;background:linear-gradient(146deg,transparent 23%,#ffe7acbf 47%,transparent 60%) border-box;mask:linear-gradient(#000 0 0) padding-box exclude,linear-gradient(#000 0 0);transition:opacity 210ms ease-out,transform 210ms ease-out;transform:translate(calc(var(--st-x) * 1px),calc(var(--st-y) * 1px));}
+.st-art[data-moving="1"] .st-foil {opacity:.18;}
+.st-caption {margin:8px 0 0;color:var(--st-muted);font-size:14px;line-height:1.45;overflow-wrap:anywhere;}
+.st-advice {margin:0;padding:0 14px;background:var(--st-level);border:1px solid var(--st-stroke);border-radius:3px;}
+.st-row {display:grid;grid-template-columns:4.15em minmax(0,1fr);gap:3px 12px;align-items:baseline;padding:13px 0;}
+.st-row+.st-row {border-top:1px solid color-mix(in srgb,var(--st-stroke) 62%,transparent);}
+.st-row dt {font:600 14px/1.6 var(--st-sans);white-space:nowrap;color:var(--st-muted);}
+.st-row dd {margin:0;font-size:16px;line-height:1.68;overflow-wrap:anywhere;color:var(--st-text);}
+.st-boundary {margin:12px 0 0;color:var(--st-muted);font-size:14px;line-height:1.55;}
+.st-details,.st-links {margin:14px 0 0;border:1px solid #716b66;border-radius:4px;background:#242423;color:#f0ece2;}
+.st-details summary{cursor:pointer;padding:10px 14px;min-height:44px;}
+.st-details ul{margin:0;padding:0 16px 12px 2.05em;overflow-wrap:anywhere;font-size:14px;}
+.st-links{display:grid;gap:4px;padding:10px 14px;}
+.st-links p{margin:0;font-size:14px;}
+.st-links a{color:#eee1c1;min-height:44px;display:flex;align-items:center;overflow-wrap:anywhere;}
+.st-result :focus-visible {outline:2px solid #d0aa65;outline-offset:2px;}
+@container (max-width:370px) {
+  .st-card {padding:20px 18px 17px;}
+  .st-title {font-size:22px;}
+  .st-advice {padding:0 11px;}
+  .st-row {gap:1px;grid-template-columns:minmax(0,1fr);padding-block:10px;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .st-plane,.st-foil {transition:none;transform:none;}
+  .st-art[data-moving="1"] .st-foil {opacity:0;}
+}
+@media print { .st-card{box-shadow:none;break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact;} .st-plane,.st-foil{transform:none;transition:none;} .st-foil{display:none;} }
+
+.st-sr-only {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0;}
+
+</style>
+<style>
+  html{color-scheme:dark}
+  body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 26%,#2b2527,#161617 65%);color:#e8e0d0;font:16px/1.6 "Noto Sans CJK SC",sans-serif}
+  main{padding:24px 12px 45px;max-width:490px;margin:auto;}
+  .cover{margin:0 0 16px;font-size:15px;color:#cfbfaa;text-align:center;}
+  .skins{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:0 0 15px;}
+  button{min-height:44px;background:#232122;color:#e5ddd0;border:1px solid #63584e;padding:0 13px;border-radius:3px;font-size:14px;cursor:pointer;}
+  button[aria-pressed="true"]{background:#d5c1a2;color:#221e1a;border-color:#d5c1a2;}
+  button:focus-visible{outline:2px solid #d0aa65;outline-offset:2px;}
+</style>
+</head>
+<body><main>
+<p class="cover">四卷札记 · 虚构示例</p>
+<div class="skins" role="group" aria-label="切换示例皮肤">
+ <button data-skin="tarot" aria-pressed="true">塔罗</button>
+ <button data-skin="iching" aria-pressed="false">易经</button>
+ <button data-skin="astrology" aria-pressed="false">星座</button>
+ <button data-skin="psychology" aria-pressed="false">心理</button>
+</div>
+<div id="card" aria-live="polite"></div>
+</main><script type="module">
+const skins = {
+  tarot: ['塔罗', 'I', '象征阅读，不作预测'],
+  iching: ['易经', 'II', '卦象用于反思，不作预测'],
+  astrology: ['星座', 'III', '象征阅读，不作预测'],
+  psychology: ['心理', 'IV', '自我探索，非诊断或正式测量'],
+};
+const labels = ['当前状态', '风险', '行动'];
+const ns = 'http://www.w3.org/2000/svg';
+const box = '0 0 400 240';
+
+function element(doc, tag, className, content) {
+  const el = doc.createElement(tag);
+  if (className) el.className = className;
+  if (content != null) el.textContent = content;
+  return el;
+}
+function mark(doc, tag, attrs) {
+  const el = doc.createElementNS(ns, tag);
+  for (const [key, value] of Object.entries(attrs)) el.setAttribute(key, String(value));
+  return el;
+}
+const path = (d, a = {}) => ['path', {d, ...a}];
+const circle = (cx, cy, r, a = {}) => ['circle', {cx, cy, r, ...a}];
+const rect = (x, y, width, height, a = {}) => ['rect', {x, y, width, height, ...a}];
+const line = (x1, y1, x2, y2, a = {}) => ['line', {x1,y1,x2,y2,...a}];
+const ink = 'var(--st-ink)', mist = 'var(--st-mist)', wash = 'var(--st-wash)', accent = 'var(--st-accent)';
+const outline = {fill:'none',stroke:ink,'stroke-width':1};
+const hairline = {...outline,opacity:.42};
+const grain = Array.from({length:68}, (_,i)=> {
+  const x=(i*67+11)%400, y=(i*109+23)%240;
+  return line(x,y,x+4+(i%9),y+(i%3)-1,{stroke:ink,opacity:.07,'stroke-width':.7});
+});
+const stars = [[31,91],[67,43],[102,132],[113,68],[147,45],[172,99],[191,47],[220,71],[244,40],[267,62],[280,136],[302,93],[340,43],[356,67],[374,131],[328,153]];
+const starMap = stars.map(([x,y],i)=>circle(x,y,i%5===0?1.5:.75,{fill:ink,opacity:.25+(i%4)*.13}));
+
+const tarotMotifs = {
+  lantern: [
+    path('M161 176c11-14 15-32 18-53 2-17 13-34 26-34 13 0 19 16 21 35l7 42 14 10H161Z',{fill:wash,stroke:ink}),
+    path('M182 125c6-25 16-36 29-34 10 2 16 11 16 27l-14 1-7-15-7 16-17 5Z',outline),
+    path('M219 127l24 10 20-11M241 139v29M165 177l17-72',outline),
+    rect(255,121,16,17,{rx:2,fill:accent,stroke:ink}),
+    line(252,139,274,139,{stroke:ink}),circle(263,129,17,{...hairline,stroke:accent}),
+  ],
+  star: [
+    path('M200 53l7 24 24 7-24 7-7 25-7-25-24-7 24-7Z',{fill:accent,stroke:ink}),
+    path('M169 126c10 10 19 11 31 0 11-10 22-10 32 0M151 145c13 8 24 9 39 0 15-9 27-10 40-1 13 9 21 9 33 1M145 165c20 10 29 10 49 0 15-8 24-8 38 0 17 8 25 9 38 1',outline),
+  ],
+  moon: [
+    path('M219 63c-44-5-62 41-30 64 20 13 44 5 52-12-36 10-53-28-22-52Z',{fill:accent,stroke:ink}),
+    path('M120 161l35-39 39 46 42-12 44-33 26 37M143 179q30-14 52-6t61-3',outline),
+  ],
+  sun: [circle(200,104,29,{fill:accent,stroke:ink}), ...Array.from({length:12},(_,i)=>{const a=i*Math.PI/6;return line(200+35*Math.cos(a),104+35*Math.sin(a),200+44*Math.cos(a),104+44*Math.sin(a),{stroke:ink});}),path('M111 163q43 27 89 2t89 0M116 183q46 23 88 0t82 1',outline)],
+  cup:[path('M167 92h66q-1 37-27 43v24h18v6h-48v-6h18v-24q-26-6-27-43Z',{fill:wash,stroke:ink,'stroke-width':1.8}),path('M174 103q26 10 52 0',outline)],
+  wand:[path('M176 166l48-89 6 4-47 90Z',{fill:accent,stroke:ink}),path('M220 95q-19-19-36-12 5 20 29 24M216 115q22-11 34 1-12 17-35 9',outline)],
+  sword:[path('M200 68l10 23-6 49h-8l-6-49ZM188 140h24v7h-9v17h-6v-17h-9Z',{fill:wash,stroke:ink,'stroke-width':1.5})],
+  coin:[circle(200,114,34,{fill:wash,stroke:ink}),circle(200,114,27,outline),path('M200 91l7 15 16 3-12 11 3 17-14-9-14 9 3-17-12-11 16-3Z',{fill:accent,stroke:ink})],
+  abstract:[path('M200 70l50 50-50 50-50-50Z',outline),circle(200,120,38,hairline),circle(200,120,15,{fill:accent}),path('M156 120h88M200 76v88',hairline)],
+};
+
+function layers(model) {
+  if (model.skin==='tarot') {
+    const motif = Object.hasOwn(tarotMotifs,model.cardMotif) ? tarotMotifs[model.cardMotif] : tarotMotifs.abstract;
+    return [
+      [rect(0,0,400,240,{fill:mist,opacity:.14}),...starMap,
+        path('M-9 192C62 180 83 143 119 146s58 46 93 31 53-35 83-34 63 29 113 49V250H-9Z',{fill:wash,opacity:.48})],
+      [path('M115 199V117a85 85 0 1 1 170 0v82M124 199v-81a76 76 0 0 1 152 0v81',hairline),
+        path('M112 202h176M25 191h50m250 0h50',hairline), ...motif],
+      [rect(14,14,372,212,{fill:'none',stroke:ink,opacity:.56}),rect(19,19,362,202,{fill:'none',stroke:ink,opacity:.18}),
+       ...[27,373].flatMap(x=>[circle(x,27,2,{fill:ink}),circle(x,212,2,{fill:ink})])],
+    ];
+  }
+  if (model.skin==='iching') {
+    const rows = (model.hexLines || []).slice().reverse().flatMap((value,i)=>{
+      const y=66+i*19, a={rx:2,fill:ink,opacity:.86};
+      const marks=value%2 ? [rect(144,y,112,6,a)] : [rect(144,y,47,6,a),rect(209,y,47,6,a)];
+      if(value===6||value===9) marks.push(circle(272,y+3,3.1,{fill:accent}));
+      return marks;
+    });
+    return [
+      [...grain,path('M-8 180 Q43 157 76 175 T145 197 Q224 228 296 177 T408 175 L408 250H-8Z',{fill:wash,opacity:.4}),
+       path('M-10 202 Q37 185 87 198T181 217Q247 220 287 204T414 194',{...hairline,opacity:.2})],
+      [circle(200,117,82,{fill:mist,opacity:.35}),circle(200,117,78,{...hairline,opacity:.24}), 
+       ...rows, ...(rows.length?[]:[path('M173 117h54M200 90v54',{...outline,opacity:.28})])],
+      [rect(17,17,366,206,{fill:'none',stroke:ink,opacity:.23}),
+        path('M17 33v-16h16m334 0h16v16m0 174v16h-16m-334 0H17v-16',outline),
+        rect(346,184,18,18,{fill:'none',stroke:accent,opacity:.7}),
+        path('M350 188h10m-10 5h9m-9 5h10m-7-10v10m4-10v10',{fill:'none',stroke:accent,opacity:.7})],
+    ];
+  }
+  if(model.skin==='astrology') {
+    const points = [[102,151],[140,117],[170,136],[206,81],[239,93],[273,61],[300,111]];
+    const contour=points.map(p=>p.join(',')).join(' ');
+    return [
+      [...stars.slice(0,12).map(([x,y],i)=>circle(x,y,i%5===0?1.5:.75,{fill:ink,opacity:.26+i%3*.1})),
+       path('M-5 191c79-46 108 31 200 11 45-10 94-66 213-37v83H0Z',{fill:wash,opacity:.31})],
+      [circle(200,117,89,{...hairline,opacity:.28}),circle(200,117,74,{...hairline,opacity:.18,'stroke-dasharray':'1 4'}),
+        ['polyline',{points:contour,...outline,opacity:.64}], ...points.map(([x,y],i)=>circle(x,y,i===3?3.1:2.2,{fill:i===3?accent:ink})),
+        path('M59 181h20m242 0h20',hairline)],
+      [rect(17,17,366,206,{fill:'none',stroke:ink,opacity:.24}),
+        ...[27,373].flatMap(x=>[circle(x,27,1.6,{fill:ink}),circle(x,212,1.6,{fill:ink})])],
+    ];
+  }
+  return [
+    [...grain,path('M22 155 C62 106 121 135 157 173S147 210 104 213 40 202 22 155Z',{fill:wash,opacity:.42})],
+    [path('M129 84Q145 55 197 51l4 126-79-20Z',{fill:mist,stroke:ink,'stroke-width':.8}),
+     path('M199 73l77-18 30 99-83 38Z',{fill:wash,stroke:ink,'stroke-width':.8}),
+     path('M179 142q31-17 55-4 19 11 52-4l-6 32-89 33Z',{fill:accent,opacity:.46}),
+     path('M144 128q17-26 38-21 29 8 42 4t44-22M157 146q14-16 36-13 30 5 68-21',hairline),
+     circle(245,102,14,{fill:'none',stroke:ink,opacity:.3})],
+    [rect(17,17,366,206,{fill:'none',stroke:ink,opacity:.25}),
+     path('M32 35h16m-8-8v16m312 154h16m-8-8v16',hairline)],
+  ];
+}
+
+function validate(input) {
+  if (!input || !Object.hasOwn(skins,input.skin)) throw new TypeError('未知卡片皮肤');
+  const {sentences} = input;
+  const three = Array.isArray(sentences) ? [...sentences] : [sentences?.state, sentences?.risk, sentences?.action];
+  if (three.length!==3 || three.some(x=>typeof x!=='string'||!x.trim())) throw new TypeError('卡片需要状态、风险、行动共三条非空文字');
+  if (input.hexLines != null && (!Array.isArray(input.hexLines)||input.hexLines.length!==6||[...input.hexLines].some(x=>!Number.isInteger(x)||x<6||x>9))) throw new TypeError('卦爻须是六个 6–9 整数，自下而上');
+  return three;
+}
+function artOf(doc, model) {
+  const art=element(doc,'div','st-art');
+  art.setAttribute('aria-hidden','true');
+  layers(model).forEach((entries,i)=>{
+    const layer=mark(doc,'svg',{class:'st-plane st-plane-'+i,viewBox:box,preserveAspectRatio:'xMidYMid meet',focusable:'false'});
+    for(const [tag,attrs] of entries) layer.append(mark(doc,tag,attrs));
+    art.append(layer);
+  });
+  art.append(element(doc,'div','st-foil'));
+  return art;
+}
+function addMotion(art, mode) {
+  const media=art.ownerDocument.defaultView?.matchMedia?.('(prefers-reduced-motion: reduce)');
+  const reset=()=>{
+    art.style.removeProperty('--st-x');
+    art.style.removeProperty('--st-y');
+    delete art.dataset.moving;
+  };
+  if (mode===false) return reset;
+  const update=(e)=>{
+    if (media?.matches || e.pointerType==='touch') return;
+    const r=art.getBoundingClientRect();
+    if(!r.width||!r.height) return;
+    const clamp=x=>Math.max(-1,Math.min(1,x));
+    art.style.setProperty('--st-x',clamp((e.clientX-r.left)/r.width*2-1).toFixed(3));
+    art.style.setProperty('--st-y',clamp((e.clientY-r.top)/r.height*2-1).toFixed(3));
+    art.dataset.moving='1';
+  };
+  art.addEventListener('pointermove',update,{passive:true});
+  art.addEventListener('pointerleave',reset);
+  art.addEventListener('pointercancel',reset);
+  media?.addEventListener?.('change',reset);
+  return ()=>{
+    art.removeEventListener('pointermove',update);
+    art.removeEventListener('pointerleave',reset);
+    art.removeEventListener('pointercancel',reset);
+    media?.removeEventListener?.('change',reset);
+    reset();
+  };
+}
+const mounted = new WeakMap();
+function safeLink(value, doc) {
+  if(typeof value!=='string' || !value.trim() || /^[\\/]{2}|[\u0000-\u001f]/.test(value.trim())) return null;
+  try {
+    const url=new URL(value,doc.baseURI);
+    return ['https:','http:'].includes(url.protocol) ? url.href : null;
+  } catch { return null; }
+}
+
+/** Mount one offline result card. No persistence, effects outside the illustrations, or hidden network requests. */
+function renderThoughtsCard(host, model, {motion=true}={}) {
+  if(!host?.ownerDocument || !host.replaceChildren) throw new TypeError('需要 DOM 容器');
+  const three=validate(model);
+  const doc=host.ownerDocument;
+  const [pillar, folio, boundary]=skins[model.skin];
+  const article=element(doc,'article','st-card');
+  article.dataset.skin=model.skin;
+  const head=element(doc,'header','st-head');
+  const ribbon=element(doc,'p','st-kicker');
+  ribbon.append(element(doc,'span',null,'把心事摊开看'),element(doc,'span',null,'卷 '+folio+' / '+pillar));
+  head.append(ribbon,element(doc,'h2','st-title',model.title||pillar+' · 一页札记'));
+  const figure=element(doc,'figure','st-figure');
+  const art=artOf(doc,model);
+  figure.append(art);
+  if(model.subject || model.skin==='astrology' || (model.skin==='iching' && model.hexLines)) {
+    const caption=[model.subject,model.skin==='astrology'?'星图为示意':null].filter(Boolean).join(' · ');
+    const summary=element(doc,'figcaption','st-caption',caption);
+    if(model.skin==='iching' && model.hexLines) {
+      const names={6:'老阴（动）',7:'少阳',8:'少阴',9:'老阳（动）'};
+      summary.append(element(doc,'span','st-sr-only','六爻，自下而上：'+model.hexLines.map(x=>names[x]).join('、')+'。'));
+    }
+    figure.append(summary);
+  }
+  const advice=element(doc,'dl','st-advice');
+  for(let i=0;i<3;i++){
+    const row=element(doc,'div','st-row');
+    row.append(element(doc,'dt',null,labels[i]),element(doc,'dd',null,three[i]));
+    advice.append(row);
+  }
+  article.append(head,figure,advice,element(doc,'p','st-boundary',model.boundary||boundary));
+  const root=element(doc,'div','st-result');
+  root.append(article);
+  if(Array.isArray(model.details) && model.details.some(x=>typeof x==='string'&&x.trim())){
+    const details=element(doc,'details','st-details');
+    details.append(element(doc,'summary',null,'展开推导与依据'));
+    const list=element(doc,'ul');
+    for(const item of model.details.filter(x=>typeof x==='string'&&x.trim())) list.append(element(doc,'li',null,item));
+    details.append(list);root.append(details);
+  }
+  const links=Array.isArray(model.links) ? model.links.flatMap(x=>{
+    const href=safeLink(x?.href,doc);
+    if(!href||typeof x?.label!=='string'||!x.label.trim()) return [];
+    const a=element(doc,'a',null,x.label);
+    a.href=href;a.rel='noreferrer noopener';
+    return [a];
+  }) : [];
+  if(links.length){
+    const nav=element(doc,'nav','st-links');
+    nav.setAttribute('aria-label','知识链接（编辑关联）');
+    nav.append(element(doc,'p',null,'延伸阅读 · 编辑关联'),...links);
+    root.append(nav);
+  }
+  mounted.get(host)?.();
+  const detach=addMotion(art,motion);
+  const destroy=()=>{
+    detach();
+    root.remove();
+    if(mounted.get(host)===destroy) mounted.delete(host);
+  };
+  host.replaceChildren(root);
+  mounted.set(host,destroy);
+  return {root,card:article,destroy};
+}
+
+
+const examples={
+  tarot:{title:'在回答之前',subject:'隐士 · 正位',cardMotif:'lantern',sentences:['你说今晚还没想好怎样回复那条消息。','如果现在匆忙发送，真正想问的事可能没说清。','先写下一句最想问的话，明早再决定要不要发。'],details:['虚构的单牌示例：隐士正位。','建议依据是对话里提到的消息，不是牌面。']},
+  iching:{title:'先走一小步',subject:'地雷复 · 自下而上',hexLines:[9,8,8,8,8,8],sentences:['你说这周想恢复写作，却一直没定从哪里开始。','一开始就计划写完一整篇，可能让开始变得更难。','今天先打开旧稿，补写一个句子。'],details:['虚构铜钱记录（自下而上）：9、8、8、8、8、8。','朱色小点是动爻位置；图像不用于预测。']},
+  astrology:{title:'留一点余地',subject:'太阳星座阅读',sentences:['你说这几天把每天的空档都排上了事。','如果没有缓冲，一件临时的事就可能打乱整天安排。','明天挑一个半小时，不提前给它安排任务。'],details:['示意星图并非实测天体位置。','本示例未请求出生资料，也未计算个人星盘。']},
+  psychology:{title:'分开今天与平时',subject:'对话辅助 · 近期观察',sentences:['你说临近交付时会反复确认，但平时未必如此。','如果确认占了休息时间，晚上可能更难收工。','今晚只确认一次截止时间，把下一次查看留给明早。'],details:['虚构近期自述，不外推为长期人格。','本示例没有用户确认的量尺作答。']},
+};
+const host=document.querySelector('#card');
+const buttons=[...document.querySelectorAll('button[data-skin]')];
+function select(skin){
+  for(const btn of buttons)btn.setAttribute('aria-pressed',String(btn.dataset.skin===skin));
+  renderThoughtsCard(host,{skin,...examples[skin]});
+}
+for(const btn of buttons)btn.addEventListener('click',()=>select(btn.dataset.skin));
+select('tarot');
+
+</script></body>
+</html>

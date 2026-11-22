@@ -1,0 +1,379 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "input.schema.json",
+  "type": "object",
+  "properties": {
+    "pillar": {
+      "enum": [
+        "tarot",
+        "iching",
+        "astrology",
+        "psychology"
+      ]
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "birth": {
+      "type": "object",
+      "properties": {
+        "calendar": {
+          "enum": [
+            "solar",
+            "lunar"
+          ]
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2100
+        },
+        "month": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "day": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 31
+        },
+        "hour": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 23
+            },
+            {
+              "enum": [
+                "unknown",
+                null
+              ]
+            }
+          ]
+        },
+        "minute": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 59
+        },
+        "second": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 59
+        },
+        "leap": {
+          "type": "boolean"
+        },
+        "sect": {
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "gender": {
+          "enum": [
+            "female",
+            "male",
+            "unspecified",
+            null
+          ]
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "timeStandard": {
+          "enum": [
+            "civil",
+            "true-solar"
+          ]
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "disambiguation": {
+          "enum": [
+            "reject",
+            "earlier",
+            "later"
+          ]
+        }
+      },
+      "required": [
+        "calendar",
+        "year",
+        "month",
+        "day",
+        "hour"
+      ],
+      "additionalProperties": false
+    },
+    "symbol": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "method": {
+              "enum": [
+                "tarot"
+              ]
+            },
+            "seed": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "cards": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 32
+                  },
+                  "orientation": {
+                    "enum": [
+                      "upright",
+                      "reversed"
+                    ]
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 3
+            },
+            "spread": {
+              "enum": [
+                "single",
+                "three"
+              ]
+            },
+            "reversals": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "method"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "method": {
+              "enum": [
+                "coin"
+              ]
+            },
+            "lines": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  6,
+                  7,
+                  8,
+                  9
+                ]
+              },
+              "minItems": 6,
+              "maxItems": 6
+            },
+            "coins": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  2,
+                  3
+                ]
+              },
+              "minItems": 18,
+              "maxItems": 18
+            },
+            "seed": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            }
+          },
+          "required": [
+            "method"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "method": {
+              "enum": [
+                "yarrow"
+              ]
+            },
+            "lines": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  6,
+                  7,
+                  8,
+                  9
+                ]
+              },
+              "minItems": 6,
+              "maxItems": 6
+            },
+            "seed": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            }
+          },
+          "required": [
+            "method"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "method": {
+              "enum": [
+                "astrology"
+              ]
+            },
+            "date": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 10,
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "time": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 8,
+              "pattern": "^\\d{2}:\\d{2}(?::\\d{2})?$"
+            },
+            "timezone": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "disambiguation": {
+              "enum": [
+                "reject",
+                "earlier",
+                "later"
+              ]
+            },
+            "utc": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 32
+            },
+            "mode": {
+              "enum": [
+                "basic",
+                "planetary"
+              ]
+            }
+          },
+          "required": [
+            "method"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "conversation": {
+      "$ref": "evidence.schema.json"
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "utterances": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 0,
+          "maxItems": 30
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 0,
+          "maxItems": 30
+        },
+        "selfReportedMbti": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "responses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "value": {
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "source": {
+            "enum": [
+              "user-scale-selection"
+            ]
+          },
+          "scaleVersion": {
+            "enum": [
+              "mini-ipip-en-1-5-v1"
+            ]
+          }
+        },
+        "required": [
+          "itemId",
+          "value",
+          "source",
+          "scaleVersion"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 20
+    },
+    "synthetic": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "pillar"
+  ],
+  "additionalProperties": false
+}

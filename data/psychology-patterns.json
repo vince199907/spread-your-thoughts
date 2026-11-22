@@ -1,0 +1,43 @@
+{
+  "ruleVersion": "psych-lexicon-v1",
+  "matching": "exact-substring",
+  "noFuzzy": true,
+  "negationWindow": 6,
+  "negationMarkers": ["并不", "不是", "没有", "不太", "不怎么", "很少", "从不", "没", "不"],
+  "complexNegations": ["不是不", "并不是不"],
+  "contrastMarkers": ["但是", "不过", "然而", "可是"],
+  "timeScopeMarkers": {
+    "acute": ["今天", "刚才", "此刻", "这会儿", "一时", "突然"],
+    "recent": ["最近", "这段时间", "这几个月", "近来"],
+    "longTerm": ["一直", "通常", "平时", "一般来说", "从小", "向来"]
+  },
+  "note": "只有下列短语会触发。其他句子进入 unmatched，不解释。",
+  "patterns": [
+    {"id": "e-high-party", "dimension": "extraversion", "theme": null, "pole": "high", "phrase": "喜欢聚会"},
+    {"id": "e-high-chat", "dimension": "extraversion", "theme": null, "pole": "high", "phrase": "爱聊天"},
+    {"id": "e-high-meet", "dimension": "extraversion", "theme": null, "pole": "high", "phrase": "主动认识新朋友"},
+    {"id": "e-high-weekend-out", "dimension": "extraversion", "theme": null, "pole": "high", "phrase": "周末想出去见人"},
+    {"id": "e-low-alone", "dimension": "extraversion", "theme": null, "pole": "low", "phrase": "想一个人待着"},
+    {"id": "e-low-quiet", "dimension": "extraversion", "theme": null, "pole": "low", "phrase": "不太想说话"},
+    {"id": "e-low-avoid", "dimension": "extraversion", "theme": null, "pole": "low", "phrase": "躲开聚会"},
+    {"id": "e-low-few", "dimension": "extraversion", "theme": null, "pole": "low", "phrase": "话不多"},
+    {"id": "a-high-feel", "dimension": "agreeableness", "theme": null, "pole": "high", "phrase": "先顾别人的感受"},
+    {"id": "a-high-listen", "dimension": "agreeableness", "theme": null, "pole": "high", "phrase": "愿意听别人说完"},
+    {"id": "a-low-ignore", "dimension": "agreeableness", "theme": null, "pole": "low", "phrase": "懒得管别人的事"},
+    {"id": "a-low-care", "dimension": "agreeableness", "theme": null, "pole": "low", "phrase": "不太在意别人怎么想"},
+    {"id": "c-high-ontime", "dimension": "conscientiousness", "theme": null, "pole": "high", "phrase": "会把事情按时做完"},
+    {"id": "c-high-order", "dimension": "conscientiousness", "theme": null, "pole": "high", "phrase": "喜欢把东西摆整齐"},
+    {"id": "c-low-late", "dimension": "conscientiousness", "theme": null, "pole": "low", "phrase": "经常拖到最后"},
+    {"id": "c-low-mess", "dimension": "conscientiousness", "theme": null, "pole": "low", "phrase": "东西常常乱放"},
+    {"id": "n-high-upset", "dimension": "neuroticism", "theme": null, "pole": "high", "phrase": "容易心烦"},
+    {"id": "n-high-swing", "dimension": "neuroticism", "theme": null, "pole": "high", "phrase": "情绪起伏很大"},
+    {"id": "n-low-steady", "dimension": "neuroticism", "theme": null, "pole": "low", "phrase": "大多数时候心里很稳"},
+    {"id": "n-low-calm", "dimension": "neuroticism", "theme": null, "pole": "low", "phrase": "不太容易被惹急"},
+    {"id": "i-high-abstract", "dimension": "intellect", "theme": null, "pole": "high", "phrase": "喜欢想抽象的问题"},
+    {"id": "i-high-images", "dimension": "intellect", "theme": null, "pole": "high", "phrase": "脑子里画面很多"},
+    {"id": "i-low-abstract", "dimension": "intellect", "theme": null, "pole": "low", "phrase": "对抽象的想法没兴趣"},
+    {"id": "i-low-daydream", "dimension": "intellect", "theme": null, "pole": "low", "phrase": "不太会空想"},
+    {"id": "nov-try", "dimension": null, "theme": "novelty", "pole": null, "phrase": "想先试试没见过的"},
+    {"id": "nov-watch", "dimension": null, "theme": "novelty", "pole": null, "phrase": "先看别人怎么做"}
+  ]
+}

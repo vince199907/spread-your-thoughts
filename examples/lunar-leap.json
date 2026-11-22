@@ -1,0 +1,13 @@
+{
+  "synthetic": true,
+  "fictional": true,
+  "note": "只用来核对 2020 年闰四月初一的历法换算，不是出生档案。",
+  "calendar": "lunar",
+  "year": 2020,
+  "month": 4,
+  "day": 1,
+  "leap": true,
+  "hour": 8,
+  "minute": 0,
+  "gender": null
+}

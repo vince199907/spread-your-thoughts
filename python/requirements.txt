@@ -1,0 +1,8 @@
+# ichingshifa 3.1.9 imports these dependencies without declaring them in its wheel.
+# Only use the pinned registry wheel (it reads its bundled pickle dataset).
+ichingshifa==3.1.9
+numpy==2.2.6
+ephem==4.2
+sxtwl==2.0.7
+cn2an==0.5.23
+proces==0.1.7

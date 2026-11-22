@@ -1,0 +1,27 @@
+{
+  "tradition": "Rider-Waite-Smith; traditional suits, ranks and names only",
+  "source": "https://sacred-texts.com/book/the-pictorial-key-to-the-tarot",
+  "note": "仅用传统牌名和结构；中文为通用称呼，不复制牌图或解释文本。",
+  "suits": [
+    {"id":"wands","nameEn":"Wands","nameZh":"权杖"},
+    {"id":"cups","nameEn":"Cups","nameZh":"圣杯"},
+    {"id":"swords","nameEn":"Swords","nameZh":"宝剑"},
+    {"id":"pentacles","nameEn":"Pentacles","nameZh":"星币"}
+  ],
+  "ranks": [
+    {"id":"ace","nameEn":"Ace","nameZh":"一"},
+    {"id":"two","nameEn":"Two","nameZh":"二"},
+    {"id":"three","nameEn":"Three","nameZh":"三"},
+    {"id":"four","nameEn":"Four","nameZh":"四"},
+    {"id":"five","nameEn":"Five","nameZh":"五"},
+    {"id":"six","nameEn":"Six","nameZh":"六"},
+    {"id":"seven","nameEn":"Seven","nameZh":"七"},
+    {"id":"eight","nameEn":"Eight","nameZh":"八"},
+    {"id":"nine","nameEn":"Nine","nameZh":"九"},
+    {"id":"ten","nameEn":"Ten","nameZh":"十"},
+    {"id":"page","nameEn":"Page","nameZh":"侍从"},
+    {"id":"knight","nameEn":"Knight","nameZh":"骑士"},
+    {"id":"queen","nameEn":"Queen","nameZh":"王后"},
+    {"id":"king","nameEn":"King","nameZh":"国王"}
+  ]
+}

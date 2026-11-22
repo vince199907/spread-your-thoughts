@@ -1,0 +1,318 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "result.schema.json",
+  "type": "object",
+  "properties": {
+    "pillar": {
+      "enum": [
+        "tarot",
+        "iching",
+        "astrology",
+        "psychology"
+      ]
+    },
+    "calculation_status": {
+      "enum": [
+        "ok",
+        "partial",
+        "unknown",
+        "not_requested",
+        "safety_support"
+      ]
+    },
+    "missing_inputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "minItems": 0,
+      "maxItems": 100
+    },
+    "facts": {
+      "type": "object",
+      "properties": {
+        "symbolic": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "bazi": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "psychology": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "confirmed_items": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "symbolic",
+        "bazi",
+        "psychology",
+        "confirmed_items"
+      ],
+      "additionalProperties": false
+    },
+    "core_view": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "explanation": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 900
+      },
+      "minItems": 1,
+      "maxItems": 20
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "reading_links": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "minItems": 0,
+      "maxItems": 15
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      },
+      "minItems": 0,
+      "maxItems": 30
+    },
+    "three_sentences": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "risk": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "state",
+        "risk",
+        "action"
+      ],
+      "additionalProperties": false
+    },
+    "source_versions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 150
+      }
+    },
+    "trace": {
+      "type": "object"
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "details": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 100
+    },
+    "card": {
+      "type": "object",
+      "properties": {
+        "skin": {
+          "enum": [
+            "tarot",
+            "iching",
+            "astrology",
+            "psychology"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "hexLines": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "enum": [
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        },
+        "cardMotif": {
+          "enum": [
+            "lantern",
+            "star",
+            "moon",
+            "sun",
+            "cup",
+            "wand",
+            "sword",
+            "coin",
+            "abstract"
+          ]
+        },
+        "sentences": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            "risk": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            "action": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            }
+          },
+          "required": [
+            "state",
+            "risk",
+            "action"
+          ],
+          "additionalProperties": false
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3000
+          },
+          "maxItems": 21
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^https://",
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "label",
+              "href"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 6
+        },
+        "boundary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "skin",
+        "title",
+        "sentences",
+        "details",
+        "links"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "pillar",
+    "calculation_status",
+    "missing_inputs",
+    "facts",
+    "core_view",
+    "explanation",
+    "actions",
+    "reading_links",
+    "evidence_ids",
+    "three_sentences",
+    "source_versions",
+    "trace",
+    "errors",
+    "card"
+  ],
+  "additionalProperties": false
+}
